@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ActivityStart"
     android:orientation="vertical"
-    android:background="@drawable/yellow_background">
+    android:background="@drawable/yellow_background2">
 
     <TextView
         android:id="@+id/textView_Title"
