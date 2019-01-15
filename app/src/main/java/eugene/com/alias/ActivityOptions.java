@@ -99,10 +99,10 @@ public class ActivityOptions extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     Fine = true;
-                    Toast.makeText(getApplicationContext().getApplicationContext(), "Fine  " + Fine, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getApplicationContext().getApplicationContext(), "Fine  " + Fine, Toast.LENGTH_SHORT).show();
                 } else {
                     Fine = false;
-                    Toast.makeText(getApplicationContext().getApplicationContext(), "Fine  " + Fine, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getApplicationContext().getApplicationContext(), "Fine  " + Fine, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -113,10 +113,10 @@ public class ActivityOptions extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     notWords = true;
-                    Toast.makeText(getApplicationContext().getApplicationContext(), "notWords  " + notWords, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext().getApplicationContext(), "notWords  " + notWords, Toast.LENGTH_SHORT).show();
                 } else {
                     notWords = false;
-                    Toast.makeText(getApplicationContext().getApplicationContext(), "notWords  " + notWords, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext().getApplicationContext(), "notWords  " + notWords, Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -136,8 +136,8 @@ public class ActivityOptions extends AppCompatActivity {
                 startActivity(intent);
 
 
-                Toast.makeText(getApplicationContext().getApplicationContext(), "timeResult  " + timeResult + "   wordsResult  " + wordsResult + "  notWords " +
-                        " " + notWords + "      Fine " + Fine, Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext().getApplicationContext(), "timeResult  " + timeResult + "   wordsResult  " + wordsResult + "  notWords " +
+//                        " " + notWords + "      Fine " + Fine, Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -156,7 +156,7 @@ public class ActivityCategories extends AppCompatActivity {
             reader.close();
             inputStream.close();
             startActivity(intent);
-            Toast.makeText(getApplicationContext(),""+ textView_length, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(),""+ textView_length, Toast.LENGTH_SHORT).show();
         } catch (Exception e){e.printStackTrace();}
     }
     public void onBackPressed(){

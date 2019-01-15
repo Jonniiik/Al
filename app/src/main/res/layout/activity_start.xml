@@ -7,16 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".ActivityStart"
     android:orientation="vertical"
-    android:background="@drawable/in_paft1">
+    android:background="@drawable/yellow_background">
 
     <TextView
         android:id="@+id/textView_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="play Alias"
+        android:text="Alias"
+        android:layout_gravity="center"
         android:textColor="@android:color/black"
-        android:textSize="30dp"
+        android:textSize="130dp"
         android:textStyle="italic"/>
 
     <Button
@@ -24,15 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/button_start_game"
         android:backgroundTint="@android:color/holo_blue_light"
         android:fontFamily="casual"
         android:text="Играть"
         android:textColor="?android:attr/textColorSecondary"
         android:textColorHint="@android:color/holo_blue_bright"
         android:textSize="30sp"
-        android:textStyle="italic"
-        android:background="@drawable/button_start_game"/>
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/buttonSetting"
@@ -40,15 +41,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
+        android:background="@drawable/button_start_game"
         android:backgroundTint="@android:color/holo_blue_light"
         android:fontFamily="casual"
-        android:text="Setting"
+        android:text="Настройки"
         android:textColor="?android:attr/textColorSecondary"
         android:textColorHint="@android:color/holo_blue_bright"
         android:textSize="30sp"
-        android:textStyle="italic"
-        android:background="@drawable/button_start_game"
-        />
+        android:textStyle="italic" />
 
 
 </LinearLayout>

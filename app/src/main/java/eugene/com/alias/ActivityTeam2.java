@@ -118,7 +118,7 @@ public class ActivityTeam2 extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.buttonInformation:
-                Intent intent = new Intent(ActivityTeam2.this, ActivityPlay.class);
+                Intent intent = new Intent(ActivityTeam2.this, ActivityGames.class);
                 intent.putStringArrayListExtra("myCategories",myCategories);
                 intent.putStringArrayListExtra("myTeams",myTeams);
                 intent.putExtra("wordsResult", wordsResult);

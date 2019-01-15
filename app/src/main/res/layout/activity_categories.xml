@@ -5,26 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityCategories">
+    tools:context=".ActivityCategories"
+    android:background="@drawable/yellow_background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:layout_weight="20">
 
         <ListView
             android:id="@+id/listViewCategories"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="450dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </ListView>
+            app:layout_constraintTop_toTopOf="parent"></ListView>
+
         <TextView
             android:id="@+id/textView_length"
             android:layout_width="100dp"
@@ -33,15 +35,16 @@
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="100dp"
+        android:layout_weight="0.1">
         <Button
             android:id="@+id/buttonTeam"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/button_start_game"
             android:backgroundTint="@android:color/holo_blue_light"
             android:fontFamily="casual"
@@ -51,7 +54,7 @@
             android:textColorHint="@android:color/holo_blue_bright"
             android:textSize="30sp"
             android:textStyle="italic"
-            android:layout_marginTop="30dp"/>
+            />
     </LinearLayout>
 
 </LinearLayout>

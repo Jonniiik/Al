@@ -108,10 +108,10 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
                         tmp_team = editTextTeam.getText().toString();
                         tmp_player1 = editTextPlayer1.getText().toString();
                         tmp_player2 = editTextPlayer2.getText().toString();
-                        if (tmp_team.length() < 1 ) {
+                        if (tmp_team.length() < 1) {
                             Toast.makeText(ActivityTeam.this, "Введи название команды", Toast.LENGTH_SHORT).show();
 
-                        }else if (tmp_player1.length() < 1 || tmp_player2.length() < 1){
+                        } else if (tmp_player1.length() < 1 || tmp_player2.length() < 1) {
                             tmp_player1 = "Игрок 1";
                             tmp_player2 = "Игрок 2";
                         } else if (tmp_team.length() > 15 || tmp_player1.length() > 15 || tmp_player2.length() > 15) {
@@ -270,22 +270,6 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
         del(button_del6, textView6, 5);
     }
 
-    public void addListenerOnButtonPlay() {
-        button_play.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(ActivityTeam.this, ActivityPlay.class);
-                        intent.putExtra("wResult", wordsResult);
-                        intent.putExtra("tResult", timeResult);
-                        intent.putExtra("Teams", myTeams);
-                        intent.putStringArrayListExtra("Categories", myCategories);
-                        startActivity(intent);
-                    }
-                }
-        );
-    }
-
     public void hideKeyboard() {
         InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
         View view = getCurrentFocus();
@@ -302,11 +286,17 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(ActivityTeam.this, ActivityGames.class);
-        intent.putExtra("wResult", wordsResult);
-        intent.putExtra("tResult", timeResult);
-        intent.putExtra("Teams", myTeams);
-        intent.putStringArrayListExtra("Categories", myCategories);
-        startActivity(intent);
+        switch (v.getId()) {
+            case R.id.button_play:
+                Intent intent = new Intent(ActivityTeam.this, ActivityGames.class);
+                intent.putExtra("wResult", wordsResult);
+                intent.putExtra("tResult", timeResult);
+                intent.putStringArrayListExtra("Categories", myCategories);
+                intent.putParcelableArrayListExtra("myTeams", myTeams);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
     }
 }
