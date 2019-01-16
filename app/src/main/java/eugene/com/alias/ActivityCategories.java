@@ -27,10 +27,10 @@ import java.util.Collections;
 public class ActivityCategories extends AppCompatActivity {
 
     private ListView listViewCategories;
-    private Button buttonTeam;
-    private TextView textView_length;
+    private Button buttonTeam,buttonAddCategoriesFile;
+    private TextView textViewLength;
     ArrayList<String> myAssets = new ArrayList<>();
-    ArrayList<String> copeMyAssets = new ArrayList<>();
+    ArrayList<String> nameMyAssets = new ArrayList<>();
     ArrayList<String> myCategories = new ArrayList<>();
     String term = null;
     int wordsResult, timeResult;
@@ -40,11 +40,12 @@ public class ActivityCategories extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
-        wordsResult = getIntent().getExtras().getInt("wResult");
-        timeResult = getIntent().getExtras().getInt("tResult");
+        wordsResult = getIntent().getExtras().getInt("wordsResult");
+        timeResult = getIntent().getExtras().getInt("timeResult");
         getOpenAssets();
         addNewArray();
-        addListenerButtonSelectCategories();
+        addListenerOnButtonSelectCategories();
+        addListenerOnButtonAddNewFile();//this void is test.
     }
 
     private void getOpenAssets() {
@@ -58,16 +59,16 @@ public class ActivityCategories extends AppCompatActivity {
             e.printStackTrace();
         }
         for (String clone : myAssets) {
-            copeMyAssets.add(clone.replace(".txt", ""));
+            nameMyAssets.add(clone.replace(".txt", ""));
         }
         listViewCategories = (ListView) findViewById(R.id.listViewCategories);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, R.layout.list_view, copeMyAssets);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, R.layout.list_view, nameMyAssets);
         listViewCategories.setAdapter(arrayAdapter);
         listViewCategories.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         listViewCategories.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                textView_length = (TextView) findViewById(R.id.textView_length);
+                textViewLength = (TextView) findViewById(R.id.textViewLength);
                 CheckedTextView checkedTextView = (CheckedTextView) view;
                 try {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open(myAssets.get(position))));
@@ -79,7 +80,7 @@ public class ActivityCategories extends AppCompatActivity {
                         }
                     }
                     reader.close();
-                    textView_length.setText(String.valueOf(length));
+                    textViewLength.setText(String.valueOf(length));
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -111,7 +112,7 @@ public class ActivityCategories extends AppCompatActivity {
         }
     }
 
-    public void addListenerButtonSelectCategories() {
+    public void addListenerOnButtonSelectCategories() {
         buttonTeam = (Button) findViewById(R.id.buttonTeam);
         buttonTeam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,12 +124,28 @@ public class ActivityCategories extends AppCompatActivity {
                     Collections.shuffle(myCategories);
                     Intent intent = new Intent(ActivityCategories.this, ActivityTeam.class);
                     intent.putStringArrayListExtra("Categories", myCategories);
-                    intent.putExtra("wResult", wordsResult);
-                    intent.putExtra("tResult", timeResult);
+                    intent.putExtra("wordsResult", wordsResult);
+                    intent.putExtra("timeResult", timeResult);
                     startActivity(intent);
                 }
             }
         });
+    }
+    public void addListenerOnButtonAddNewFile() {
+        buttonAddCategoriesFile = (Button) findViewById(R.id.buttonAddCategoriesFile);
+        final int READ_REQ = 24;
+        buttonAddCategoriesFile.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        addNewArray();
+                        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                        intent.addCategory(Intent.CATEGORY_OPENABLE);
+                        intent.setType("text/*");
+                        startActivityForResult(intent, READ_REQ);
+                    }
+                }
+        );
     }
 
     @Override
@@ -151,8 +168,8 @@ public class ActivityCategories extends AppCompatActivity {
             Collections.shuffle(myCategories);
             Intent intent = new Intent(ActivityCategories.this, ActivityTeam.class);
             intent.putStringArrayListExtra("Categories", myCategories);
-            intent.putExtra("wResult", wordsResult);
-            intent.putExtra("tResult",timeResult);
+            intent.putExtra("wordsResult", wordsResult);
+            intent.putExtra("timeResult",timeResult);
             reader.close();
             inputStream.close();
             startActivity(intent);

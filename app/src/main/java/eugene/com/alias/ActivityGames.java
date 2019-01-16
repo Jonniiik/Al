@@ -121,8 +121,8 @@ public class ActivityGames extends AppCompatActivity {
                                 textViewTxtScore.setTextColor(getResources().getColor(R.color.blue));
                                 textViewScore.setTextColor(getResources().getColor(R.color.blue));
                             } else if (score > 0) {
-                                textViewTxtScore.setTextColor(getResources().getColor(R.color.white));
-                                textViewScore.setTextColor(getResources().getColor(R.color.white));
+                                textViewTxtScore.setTextColor(getResources().getColor(R.color.green));
+                                textViewScore.setTextColor(getResources().getColor(R.color.green));
                             } else {
                                 textViewTxtScore.setTextColor(getResources().getColor(R.color.red));
                                 textViewScore.setTextColor(getResources().getColor(R.color.red));
@@ -156,8 +156,8 @@ public class ActivityGames extends AppCompatActivity {
                                 textViewTxtScore.setTextColor(getResources().getColor(R.color.blue));
                                 textViewScore.setTextColor(getResources().getColor(R.color.blue));
                             } else if (score > 0) {
-                                textViewTxtScore.setTextColor(getResources().getColor(R.color.white));
-                                textViewScore.setTextColor(getResources().getColor(R.color.white));
+                                textViewTxtScore.setTextColor(getResources().getColor(R.color.green));
+                                textViewScore.setTextColor(getResources().getColor(R.color.green));
                             } else {
                                 textViewTxtScore.setTextColor(getResources().getColor(R.color.red));
                                 textViewScore.setTextColor(getResources().getColor(R.color.red));
@@ -228,7 +228,7 @@ public class ActivityGames extends AppCompatActivity {
         if (emptyCategories == true) {
             builder.setTitle("Sorry, Все закончилось\nРекорд ");
         } else {
-            builder.setTitle("Начинаем ");
+            builder.setTitle("Счет ");
         }
         myTeams.get(turn(attempt, myTeams)).addScore(score);
         score = 0;
@@ -267,7 +267,7 @@ public class ActivityGames extends AppCompatActivity {
 
     public void SeeTerms() {
         final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ActivityGames.this, android.app.AlertDialog.THEME_HOLO_LIGHT);
-        builder.setTitle("Счет  " + score);
+        builder.setTitle("Счёт  " + score);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < EoTTerms.size(); i++) {
             sb.append(EoTTerms.get(i).getTerm() + " " + EoTTerms.get(i).getResult() + "\n");
@@ -295,7 +295,7 @@ public class ActivityGames extends AppCompatActivity {
         play = true;
         final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ActivityGames.this, android.app.AlertDialog.THEME_HOLO_LIGHT);
         builder.setTitle("Поздравляю");
-        builder.setMessage(myTeamsSorted.get(0).getName() + " are the real ....");
+        builder.setMessage(myTeamsSorted.get(0).getName() + "\n Сыграете ещё");
         builder.setNegativeButton("Выйти?", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

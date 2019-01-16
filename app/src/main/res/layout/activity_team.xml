@@ -8,7 +8,7 @@
     android:background="@drawable/yellow_background2">
 
     <Button
-        android:id="@+id/button_sign_team"
+        android:id="@+id/buttonAddTeam"
         android:layout_width="178dp"
         android:layout_height="54dp"
         android:layout_marginBottom="8dp"
@@ -30,7 +30,7 @@
         app:layout_constraintVertical_bias="0.391"/>
 
     <Button
-        android:id="@+id/button_apply"
+        android:id="@+id/buttonEditTeamName"
         android:layout_width="178dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.391" />
 
     <Button
-        android:id="@+id/button_play"
+        android:id="@+id/buttonPlay"
         android:layout_width="174dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
@@ -61,7 +61,7 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="@android:color/holo_green_light"
         android:fontFamily="casual"
-        android:text="Игрть"
+        android:text="Играть"
         android:textColor="?android:attr/textColorSecondary"
         android:textColorHint="@android:color/holo_green_light"
         android:textSize="14sp"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.391" />
 
     <TextView
-        android:id="@+id/textView_team1"
+        android:id="@+id/textViewTeam1"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.53" />
 
     <TextView
-        android:id="@+id/textView_team2"
+        android:id="@+id/textViewTeam2"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -110,7 +110,7 @@
         app:layout_constraintVertical_bias="0.606" />
 
     <TextView
-        android:id="@+id/textView_team3"
+        android:id="@+id/textViewTeam3"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -128,7 +128,7 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <TextView
-        android:id="@+id/textView_team4"
+        android:id="@+id/textViewTeam4"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -146,7 +146,7 @@
         app:layout_constraintVertical_bias="0.761" />
 
     <TextView
-        android:id="@+id/textView_team5"
+        android:id="@+id/textViewTeam5"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -164,7 +164,7 @@
         app:layout_constraintVertical_bias="0.838" />
 
     <TextView
-        android:id="@+id/textView_team6"
+        android:id="@+id/textViewTeam6"
         android:layout_width="211dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -182,7 +182,7 @@
         app:layout_constraintVertical_bias="0.915" />
 
     <EditText
-        android:id="@+id/editText_team_name"
+        android:id="@+id/editTextTeamName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -202,7 +202,7 @@
         app:layout_constraintVertical_bias="0.016" />
 
     <EditText
-        android:id="@+id/editText_player1_name"
+        android:id="@+id/editTextPlayer1Name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -222,7 +222,7 @@
         app:layout_constraintVertical_bias="0.145" />
 
     <EditText
-        android:id="@+id/editText_player2_name"
+        android:id="@+id/editTextPlayer2Name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -243,7 +243,7 @@
 
 
     <ImageButton
-        android:id="@+id/button_edit1"
+        android:id="@+id/buttonEditTeam1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -260,7 +260,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_edit2"
+        android:id="@+id/buttonEditTeam2"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -277,7 +277,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_edit3"
+        android:id="@+id/buttonEditTeam3"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -294,7 +294,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_edit4"
+        android:id="@+id/buttonEditTeam4"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -311,7 +311,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_edit5"
+        android:id="@+id/buttonEditTeam5"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -328,7 +328,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_edit6"
+        android:id="@+id/buttonEditTeam6"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -345,7 +345,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/button_del1"
+        android:id="@+id/buttonDelTeamName1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -362,7 +362,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/button_del2"
+        android:id="@+id/buttonDelTeamName2"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -379,7 +379,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/button_del3"
+        android:id="@+id/buttonDelTeamName3"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -396,25 +396,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/button_del4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@android:color/holo_blue_bright"
-        app:srcCompat="@drawable/del"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="360dp" />
-
-    <ImageButton
-        android:id="@+id/button_del5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@android:color/holo_blue_bright"
-        app:srcCompat="@drawable/del"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="395dp" />
-
-    <ImageButton
-        android:id="@+id/button_del6"
+        android:id="@+id/buttonDelTeamName4"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -424,9 +406,43 @@
         android:background="@android:color/holo_blue_bright"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
+        app:layout_constraintVertical_bias="0.764"
+        app:srcCompat="@drawable/del" />
+
+    <ImageButton
+        android:id="@+id/buttonDelTeamName5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84"
+        app:srcCompat="@drawable/del" />
+
+    <ImageButton
+        android:id="@+id/buttonDelTeamName6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914"
         app:srcCompat="@drawable/del" />
 </android.support.constraint.ConstraintLayout>

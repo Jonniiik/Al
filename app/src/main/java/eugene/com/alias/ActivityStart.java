@@ -29,7 +29,7 @@ public class ActivityStart extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.buttonSetting:
-                Toast.makeText(getApplicationContext(), "Пока не работает", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext().getApplicationContext(), "Пока не работает", Toast.LENGTH_SHORT).show();
                 break;
                 default:
                     break;
