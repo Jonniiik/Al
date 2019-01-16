@@ -43,7 +43,7 @@ public class ActivityOptions extends AppCompatActivity {
         wordsView.setText(wordText);
 
         seekBarWord.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progressWords = 5;
+            int progressWords = 0;
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressV, boolean fromUser) {
@@ -71,7 +71,7 @@ public class ActivityOptions extends AppCompatActivity {
         timeView.setText(timeText);
 
         seekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progressTime = 5;
+            int progressTime = 0;
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressT, boolean fromUser) {
@@ -131,8 +131,8 @@ public class ActivityOptions extends AppCompatActivity {
                 wordsResult = Integer.parseInt(wordsView.getText().toString());
                 timeResult = Integer.parseInt(timeView.getText().toString());
                 Intent intent = new Intent(ActivityOptions.this, ActivityCategories.class);
-                intent.putExtra("wResult", wordsResult);
-                intent.putExtra("tResult", timeResult);
+                intent.putExtra("wordsResult", wordsResult);
+                intent.putExtra("timeResult", timeResult);
                 startActivity(intent);
 
 

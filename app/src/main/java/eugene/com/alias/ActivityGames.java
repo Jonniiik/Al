@@ -21,7 +21,7 @@ public class ActivityGames extends AppCompatActivity {
     ArrayList<Team> myTeams = new ArrayList<>();
     ArrayList<Team> myTeamsSorted = new ArrayList<>(myTeams.size());
     ArrayList<String> myCategories = new ArrayList<>();
-    ArrayList<EndOfTurnTerms> EoTTerms = new ArrayList<>();
+    ArrayList<EndOfTurnTerms> endOfTurnTerms = new ArrayList<>();
 
     int wordsResult, timeResult, score;
     int attempt = 0;
@@ -32,8 +32,8 @@ public class ActivityGames extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
-        wordsResult = getIntent().getExtras().getInt("wResult");
-        timeResult = getIntent().getExtras().getInt("tResult");
+        wordsResult = getIntent().getExtras().getInt("wordsResult");
+        timeResult = getIntent().getExtras().getInt("timeResult");
         myCategories = getIntent().getExtras().getStringArrayList("Categories");
         myTeams = getIntent().getParcelableArrayListExtra("myTeams");
 
@@ -108,7 +108,7 @@ public class ActivityGames extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         score++;
-                        EoTTerms.add(new EndOfTurnTerms(myCategories.get(0), "+"));
+                        endOfTurnTerms.add(new EndOfTurnTerms(myCategories.get(0), "+"));
                         myCategories.remove(0);
                         if (myCategories.isEmpty()) {
                             emptyCategories = true;
@@ -143,7 +143,7 @@ public class ActivityGames extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         score--;
-                        EoTTerms.add(new EndOfTurnTerms(myCategories.get(0), "-"));
+                        endOfTurnTerms.add(new EndOfTurnTerms(myCategories.get(0), "-"));
                         myCategories.remove(0);
                         if (myCategories.isEmpty()) {
                             emptyCategories = true;
@@ -170,7 +170,7 @@ public class ActivityGames extends AppCompatActivity {
     }
 
     public void newAttempt() {
-        EoTTerms.clear();
+        endOfTurnTerms.clear();
         GetReady();
         textViewScore = (TextView) findViewById(R.id.textViewScore);
         textViewTxtScore = (TextView) findViewById(R.id.textViewTxtScore);
@@ -269,8 +269,8 @@ public class ActivityGames extends AppCompatActivity {
         final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ActivityGames.this, android.app.AlertDialog.THEME_HOLO_LIGHT);
         builder.setTitle("Счёт  " + score);
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < EoTTerms.size(); i++) {
-            sb.append(EoTTerms.get(i).getTerm() + " " + EoTTerms.get(i).getResult() + "\n");
+        for (int i = 0; i < endOfTurnTerms.size(); i++) {
+            sb.append(endOfTurnTerms.get(i).getTerm() + " " + endOfTurnTerms.get(i).getResult() + "\n");
         }
         builder.setMessage(sb.toString());
         builder.setPositiveButton("Далее ", new DialogInterface.OnClickListener() {
