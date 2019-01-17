@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class ActivityTeam extends AppCompatActivity implements View.OnClickListener {
     private Button buttonAddTeam, buttonPlay, buttonEditTeamName;
     private ImageButton buttonEditTeam1, buttonEditTeam2, buttonEditTeam3, buttonEditTeam4, buttonEditTeam5, buttonEditTeam6;
-    private ImageButton buttonDelTeamName1, buttonDelTeamName2, buttonDelTeamName3, buttonDelTeamName4, buttonDelTeamName5, buttonDelTeamName6;
+    private ImageButton buttonDelTeam1, buttonDelTeam2, buttonDelTeam3, buttonDelTeam4, buttonDelTeam5, buttonDelTeam6;
     private EditText editTextTeamName, editTextPlayer1Name, editTextPlayer2Name;
     private TextView textViewTeam1, textViewTeam2, textViewTeam3, textViewTeam4, textViewTeam5, textViewTeam6;
     String teamName, playerOneName, playerTwoName = null;
@@ -47,12 +47,12 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
         buttonEditTeam5 = (ImageButton) findViewById(R.id.buttonEditTeam5);
         buttonEditTeam6 = (ImageButton) findViewById(R.id.buttonEditTeam6);
 
-        buttonDelTeamName1 = (ImageButton) findViewById(R.id.buttonDelTeamName1);
-        buttonDelTeamName2 = (ImageButton) findViewById(R.id.buttonDelTeamName2);
-        buttonDelTeamName3 = (ImageButton) findViewById(R.id.buttonDelTeamName3);
-        buttonDelTeamName4 = (ImageButton) findViewById(R.id.buttonDelTeamName4);
-        buttonDelTeamName5 = (ImageButton) findViewById(R.id.buttonDelTeamName5);
-        buttonDelTeamName6 = (ImageButton) findViewById(R.id.buttonDelTeamName6);
+        buttonDelTeam1 = (ImageButton) findViewById(R.id.buttonDelTeam1);
+        buttonDelTeam2 = (ImageButton) findViewById(R.id.buttonDelTeam2);
+        buttonDelTeam3 = (ImageButton) findViewById(R.id.buttonDelTeam3);
+        buttonDelTeam4 = (ImageButton) findViewById(R.id.buttonDelTeam4);
+        buttonDelTeam5 = (ImageButton) findViewById(R.id.buttonDelTeam5);
+        buttonDelTeam6 = (ImageButton) findViewById(R.id.buttonDelTeam6);
 
         editTextTeamName = (EditText) findViewById(R.id.editTextTeamName);
         editTextPlayer1Name = (EditText) findViewById(R.id.editTextPlayer1Name);
@@ -73,12 +73,12 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
         buttonEditTeam4.setVisibility(View.GONE);
         buttonEditTeam5.setVisibility(View.GONE);
         buttonEditTeam6.setVisibility(View.GONE);
-        buttonDelTeamName1.setVisibility(View.GONE);
-        buttonDelTeamName2.setVisibility(View.GONE);
-        buttonDelTeamName3.setVisibility(View.GONE);
-        buttonDelTeamName4.setVisibility(View.GONE);
-        buttonDelTeamName5.setVisibility(View.GONE);
-        buttonDelTeamName6.setVisibility(View.GONE);
+        buttonDelTeam1.setVisibility(View.GONE);
+        buttonDelTeam2.setVisibility(View.GONE);
+        buttonDelTeam3.setVisibility(View.GONE);
+        buttonDelTeam4.setVisibility(View.GONE);
+        buttonDelTeam5.setVisibility(View.GONE);
+        buttonDelTeam6.setVisibility(View.GONE);
         buttonPlay.setOnClickListener(this);
 
         addListenerOnButtonSign();
@@ -100,7 +100,7 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
     public void addListenerOnButtonSign() {
         final TextView[] textViews = {textViewTeam1, textViewTeam2, textViewTeam3, textViewTeam4, textViewTeam5, textViewTeam6};
         final ImageButton[] editButtons = {buttonEditTeam1, buttonEditTeam2, buttonEditTeam3, buttonEditTeam4, buttonEditTeam5, buttonEditTeam6};
-        final ImageButton[] delButtons = {buttonDelTeamName1, buttonDelTeamName2, buttonDelTeamName3, buttonDelTeamName4, buttonDelTeamName5, buttonDelTeamName6};
+        final ImageButton[] delButtons = {buttonDelTeam1, buttonDelTeam2, buttonDelTeam3, buttonDelTeam4, buttonDelTeam5, buttonDelTeam6};
         buttonAddTeam.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -141,7 +141,7 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
 
     public void edit(final ImageButton button, final TextView textView, final int index) {
         final ImageButton[] editButtons = {buttonEditTeam1, buttonEditTeam2, buttonEditTeam3, buttonEditTeam4, buttonEditTeam5, buttonEditTeam6};
-        final ImageButton[] delButtons = {buttonDelTeamName1, buttonDelTeamName2, buttonDelTeamName3, buttonDelTeamName4, buttonDelTeamName5, buttonDelTeamName6};
+        final ImageButton[] delButtons = {buttonDelTeam1, buttonDelTeam2, buttonDelTeam3, buttonDelTeam4, buttonDelTeam5, buttonDelTeam6};
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -192,7 +192,7 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
     public void del(final ImageButton button, final TextView textView, final int index) {
         final TextView[] textViews = {textViewTeam1, textViewTeam2, textViewTeam3, textViewTeam4, textViewTeam5, textViewTeam6};
         final ImageButton[] editButtons = {buttonEditTeam1, buttonEditTeam2, buttonEditTeam3, buttonEditTeam4, buttonEditTeam5, buttonEditTeam6};
-        final ImageButton[] delButtons = {buttonDelTeamName1, buttonDelTeamName2, buttonDelTeamName3, buttonDelTeamName4, buttonDelTeamName5, buttonDelTeamName6};
+        final ImageButton[] delButtons = {buttonDelTeam1, buttonDelTeam2, buttonDelTeam3, buttonDelTeam4, buttonDelTeam5, buttonDelTeam6};
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -247,27 +247,27 @@ public class ActivityTeam extends AppCompatActivity implements View.OnClickListe
     }
 
     public void addListenerOnButtonDel1() {
-        del(buttonDelTeamName1, textViewTeam1, 0);
+        del(buttonDelTeam1, textViewTeam1, 0);
     }
 
     public void addListenerOnButtonDel2() {
-        del(buttonDelTeamName2, textViewTeam2, 1);
+        del(buttonDelTeam2, textViewTeam2, 1);
     }
 
     public void addListenerOnButtonDel3() {
-        del(buttonDelTeamName3, textViewTeam3, 2);
+        del(buttonDelTeam3, textViewTeam3, 2);
     }
 
     public void addListenerOnButtonDel4() {
-        del(buttonDelTeamName4, textViewTeam4, 3);
+        del(buttonDelTeam4, textViewTeam4, 3);
     }
 
     public void addListenerOnButtonDel5() {
-        del(buttonDelTeamName5, textViewTeam5, 4);
+        del(buttonDelTeam5, textViewTeam5, 4);
     }
 
     public void addListenerOnButtonDel6() {
-        del(buttonDelTeamName6, textViewTeam6, 5);
+        del(buttonDelTeam6, textViewTeam6, 5);
     }
 
     public void hideKeyboard() {

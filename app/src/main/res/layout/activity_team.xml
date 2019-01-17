@@ -345,7 +345,7 @@
         app:srcCompat="@drawable/pencil" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName1"
+        android:id="@+id/buttonDelTeam1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -362,7 +362,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName2"
+        android:id="@+id/buttonDelTeam2"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -379,7 +379,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName3"
+        android:id="@+id/buttonDelTeam3"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -396,7 +396,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName4"
+        android:id="@+id/buttonDelTeam4"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -413,7 +413,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName5"
+        android:id="@+id/buttonDelTeam5"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -430,7 +430,7 @@
         app:srcCompat="@drawable/del" />
 
     <ImageButton
-        android:id="@+id/buttonDelTeamName6"
+        android:id="@+id/buttonDelTeam6"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
